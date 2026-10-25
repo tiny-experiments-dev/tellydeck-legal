@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="referrer" content="no-referrer">
-  <meta name="description" content="Privacy Policy for TellyDeck by Tiny Experiments: media-provider connections, local storage, backups, support and data deletion.">
+  <meta name="description" content="Privacy Policy for TellyDeck by Tiny Experiments: email/password accounts, device information, media-provider connections, backups, retention and deletion.">
   <title>TellyDeck Privacy Policy · Tiny Experiments</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body data-release-scope="accounts-unconfigured">
+<body data-release-scope="accounts-enabled-purchases-disabled">
   <a class="skip-link" href="#main-content">Skip to content</a>
   <header class="site-header"><div class="wrap header-inner">
     <a class="brand" href="index.html"><span class="brand-symbol" aria-hidden="true">te</span><span>Tiny Experiments<small>TellyDeck for Android TV</small></span></a>
@@ -17,17 +17,17 @@
   <main id="main-content" class="wrap">
     <p class="eyebrow">Tiny Experiments · TellyDeck</p>
     <h1>Privacy Policy</h1>
-    <p class="lead">How TellyDeck handles information when you add your own media sources, browse programmes and use the Android TV player.</p>
-    <div class="meta"><span>Publisher: Tiny Experiments</span><span>Last updated: <time datetime="2026-10-24">24 October 2026</time></span></div>
-    <div class="callout"><strong>Scope of this notice:</strong> this policy covers the current release configuration, in which TellyDeck account registration, sign-in and Premium checkout are unavailable. Firebase account services and the Premium backend have not been enabled. Information about future account/purchase processing will be published before those features are enabled.</div>
+    <p class="lead">How TellyDeck handles information when you use an email/password account, add your own media sources and use the Android TV player.</p>
+    <div class="meta"><span>Publisher: Tiny Experiments</span><span>Last updated: <time datetime="2026-10-25">25 October 2026</time></span></div>
+    <div class="callout"><strong>Scope of this notice:</strong> this policy covers account-enabled builds of TellyDeck, with email/password accounts and account/device management. Accounts remain unavailable in older, unconfigured releases. New Premium checkout is disabled. Creating an account does not buy Premium or unlock paid features.</div>
     <nav class="toc" aria-label="On this page"><strong>On this page</strong><ul>
-      <li><a href="#scope">About the app</a></li><li><a href="#local-data">Local information</a></li><li><a href="#network">Network connections</a></li><li><a href="#accounts">Account availability</a></li><li><a href="#backups">Backups</a></li><li><a href="#security">Security &amp; diagnostics</a></li><li><a href="#support">Support</a></li><li><a href="#retention">Retention &amp; deletion</a></li><li><a href="#audience">Audience</a></li><li><a href="#website">These web pages</a></li><li><a href="#contact">Contact</a></li>
+      <li><a href="#scope">About the app</a></li><li><a href="#local-data">Local information</a></li><li><a href="#network">Provider connections</a></li><li><a href="#accounts">Accounts &amp; cloud processing</a></li><li><a href="#purchases">Purchases</a></li><li><a href="#backups">Backups</a></li><li><a href="#security">Security &amp; diagnostics</a></li><li><a href="#support">Support</a></li><li><a href="#retention">Retention &amp; your choices</a></li><li><a href="#audience">Audience</a></li><li><a href="#website">These web pages</a></li><li><a href="#contact">Contact</a></li>
     </ul></nav>
 
     <section id="scope" class="section">
       <h2>1. About TellyDeck</h2>
       <p>TellyDeck is a general-purpose IPTV player for Android TV, published under the developer name <strong>Tiny Experiments</strong>. You provide the playlists, portal details, programme guides and media sources you want to use. The app does not provide a television subscription or a built-in catalogue of channels.</p>
-      <p>This policy distinguishes information handled on your TV, requests sent directly to providers you choose, and information you voluntarily send to support. It does not claim that all information stays on your device or that every connection is encrypted.</p>
+      <p>This policy distinguishes information handled on your TV, requests sent directly to providers you choose, cloud account processing and information you voluntarily send to support. It does not claim that all information stays on your device or that every connection is encrypted.</p>
     </section>
 
     <section id="local-data" class="section">
@@ -38,14 +38,15 @@
         <li>Provider access information contained in source URLs or portal configuration, including usernames, passwords, access tokens, MAC/device identifiers, serial numbers or signatures where supplied or required by your provider.</li>
         <li>Channel and on-demand metadata, programme titles/descriptions/times, artwork, downloaded source data and refresh timestamps.</li>
         <li>Favourites, recent channel identifiers, recent searches and app/player preferences. Channel identifiers may contain complete stream URLs, including access credentials.</li>
-        <li>Recording files and related channel, source, programme, timing, file-path and error information, where present from earlier use or restored data. Starting new recordings is Premium-gated and unavailable while Premium services are unconfigured.</li>
+        <li>Recording files and related channel, source, programme, timing, file-path and error information, where present from earlier use or restored data. Starting new recordings is Premium-gated; having a free account alone does not unlock recording.</li>
+        <li>Account sign-in/session information and account/device state used to access the account service. Device-proof private keys are held in Android Keystore; their public counterparts are used for server proof checks.</li>
       </ul>
-      <p>This information supports playback, browsing, guides, source refresh, remembering your choices and managing existing local information. Most source/activity records use Android app-private storage without additional app-layer encryption. Stalker portal passwords have a separate Android Keystore-backed encrypted store outside Android backup; this protection does not apply to every playlist URL, credential, cache or export.</p>
+      <p>This information supports playback, browsing, guides, source refresh, remembering your choices and managing account or local information. Most source/activity records use Android app-private storage without additional app-layer encryption. Stalker portal passwords have a separate Android Keystore-backed encrypted store outside Android backup; this protection does not apply to every playlist URL, credential, cache or export.</p>
     </section>
 
     <section id="network" class="section">
       <h2>3. Connections to your selected providers</h2>
-      <p>The app connects to the source addresses you supply to download playlists and guides, load artwork and play media. Connections can also reach redirected destinations, content-delivery networks and separate artwork hosts. These requests are direct; TellyDeck does not route them through an enabled Tiny Experiments playlist or playback backend.</p>
+      <p>The app connects to the source addresses you supply to download playlists and guides, load artwork and play media. Connections can also reach redirected destinations, content-delivery networks and separate artwork hosts. These requests are direct; the TellyDeck account service is not a playlist or playback relay.</p>
       <p>Those servers receive ordinary network information such as your IP address, request timing, requested resource and client information. They also receive credentials, identifiers, cookies or tokens needed for the request. Xtream and some portal requests can include authentication information in URLs, headers or cookies. Requested resources can reveal the content you access.</p>
       <p>Your chosen providers and their infrastructure have their own privacy practices. We do not control their handling or retention of those requests.</p>
       <div class="callout"><strong>Prefer HTTPS sources.</strong> TellyDeck permits HTTP for compatibility, including redirects to HTTP. Traffic to an HTTP destination is not protected by TLS. Use sources and networks you trust.</div>
@@ -53,62 +54,81 @@
     </section>
 
     <section id="accounts" class="section">
-      <h2>4. Accounts and purchases are not enabled</h2>
-      <p>The current release does not offer working TellyDeck account creation, sign-in, device activation or Premium checkout. The app’s account screens report that service configuration is missing. In this configuration, the app does not initialise its Firebase Authentication account service or connect to the TellyDeck Premium backend, and its billing refresh stops before querying Play products.</p>
-      <p>Consequently, this release does not send registration email/password information, device-activation proofs or Play purchase tokens to an operating TellyDeck account service. There are no enabled TellyDeck cloud-account or purchase-ownership records to delete through this release.</p>
-      <p>Installing/updating the app through Google Play, using an Android/Google account, or opening Google Play’s subscription-management page is separate from creating a TellyDeck account. Google handles its platform information under the <a href="https://policies.google.com/privacy" rel="noreferrer">Google Privacy Policy</a>.</p>
-      <p>We will update this notice before enabling account or purchasing services, including their data categories, purposes, providers, retention and deletion arrangements. This notice does not present an implemented but unconfigured backend as an active service.</p>
+      <h2>4. Email/password accounts and cloud processing</h2>
+      <h3>Firebase Authentication</h3>
+      <p>When you register or sign in, Google Firebase Authentication handles your email address, password credentials, account identifier (Firebase UID), verification status and authentication/session information. Email/password is the supported sign-in method. Email verification and password-reset emails and their action links are handled through Firebase Authentication. Use those links yourself; do not send them to support.</p>
+      <p>The TellyDeck account service checks Firebase identity tokens and current account information, including the UID, email/password-provider status, email-verification status and recent sign-in time. It does not maintain a second password database. Passwords are handled by Google's authentication service rather than sent to the TellyDeck account API as password fields.</p>
+      <h3>Account and device information</h3>
+      <p>The account service receives and stores hashed account identifiers, device public keys and derived device identifiers, device labels, activation state, last-seen and relevant expiry timestamps, request-rate counts/windows, and account-closure/cleanup state. Device-proof requests include security challenges, nonces, the requested action, a hash of the action details, expiry/consumption information and a device signature. Your device-proof private key is not uploaded to this service.</p>
+      <p>We use these records to authenticate requests, display and manage account devices, enforce device and request limits, prevent reuse of security proofs and process account closure and cleanup. Requests also involve ordinary network and infrastructure information such as IP addresses and request times processed by the hosting/authentication services.</p>
+      <p>The account database is not a cloud backup of your playlists, provider passwords, viewing history, guides or recordings. Information you choose to include in support mail is separate.</p>
+      <h3>Service providers and locations</h3>
+      <p>Google provides Firebase Authentication, the Firestore database and the cloud infrastructure used to operate the account API. The selected Firestore database and account API region is <strong>us-east1 (South Carolina, United States)</strong>. That regional selection does <strong>not</strong> guarantee that all Firebase Authentication, infrastructure logs, support systems or other Google processing stays in that region or exclusively in the United States. Providers may process information in other locations under their applicable terms and policies.</p>
+      <p>Google's services and platforms have their own practices; see the <a href="https://policies.google.com/privacy" rel="noreferrer">Google Privacy Policy</a> and <a href="https://firebase.google.com/support/privacy" rel="noreferrer">Firebase privacy information</a>. A Google Play/Android account is separate from your TellyDeck account.</p>
+    </section>
+
+    <section id="purchases" class="section">
+      <h2>5. New Premium purchases are disabled</h2>
+      <p>New Premium checkout is disabled. Creating or signing in to a TellyDeck account does not purchase Premium, and the TellyDeck account API does not collect payment-card details. We will update this notice before enabling new purchases, including purchase-data categories and separate purchase-ownership retention arrangements.</p>
+      <p>Installing or updating through Google Play is separate from making a TellyDeck Premium purchase. Google handles its platform information under its own policies.</p>
     </section>
 
     <section id="backups" class="section">
-      <h2>5. Android backup, external files and exports</h2>
+      <h2>6. Android backup, external files and exports</h2>
       <p>The app enables Android system backup/device-transfer support. Depending on your TV, system settings, provider and platform limits, eligible source information, preferences and app files may be included in an Android-managed cloud backup or transfer. This is not a promise that a complete backup exists. Licensing caches are excluded, and Keystore-backed secrets have separate restrictions.</p>
-      <p>Manual backup/restore is Premium-gated and unavailable while Premium services are unconfigured. If you retain exports from an earlier build, those archives may contain source information, local playlist assets, settings, favourites and history, including credential-bearing URLs. An export made without a password is not encrypted. Password-protected exports use encryption, but that does not protect every independent copy or temporary file.</p>
-      <p>Imported files and copies in shared/removable storage or a chosen document provider can exist independently of the app. A document provider may itself use network/cloud storage. Manage those copies and Android-managed backups separately; they are not necessarily erased by clearing app data or uninstalling TellyDeck.</p>
+      <p>Manual backup/restore is Premium-gated; creating a free account does not unlock it. If you retain exports from an earlier build, those archives may contain source information, local playlist assets, settings, favourites and history, including credential-bearing URLs. An export made without a password is not encrypted. Password-protected exports use encryption, but that does not protect every independent copy or temporary file.</p>
+      <p>Imported files and copies in shared/removable storage or a chosen document provider can exist independently of the app. A document provider may itself use network/cloud storage. Manage those copies and Android-managed backups separately; they are not necessarily erased by account deletion, clearing app data or uninstalling TellyDeck.</p>
     </section>
 
     <section id="security" class="section">
-      <h2>6. Permissions, security and diagnostics</h2>
-      <p>TellyDeck uses capabilities for network access, local-network features, supported file/media access, foreground operations, wake handling and optional startup-related behaviour. Availability and permission prompts depend on the feature, Android version, device and your choices. Declared permissions do not mean every optional feature is enabled in this release.</p>
-      <p>The reviewed app does not add an advertising SDK, Firebase Analytics or a remote crash-reporting SDK. Local player diagnostics help identify playback/network conditions. This does not mean Android, Google Play or your source providers collect no diagnostics.</p>
-      <p>Android logs can contain playback/recording errors, channel/provider information and, in some error paths, URLs that contain credentials. The current app has no identified automatic remote log uploader. Before sharing logs with support, review and remove passwords, tokens, private source addresses and unnecessary personal information.</p>
+      <h2>7. Permissions, security and diagnostics</h2>
+      <p>TellyDeck uses capabilities for network access, local-network features, supported file/media access, foreground operations, wake handling and optional startup-related behaviour. Availability and permission prompts depend on the feature, Android version, device and your choices. Declared permissions do not mean every optional feature is enabled.</p>
+      <p>Local player diagnostics help identify playback/network conditions. Android, Google Play, Firebase/cloud infrastructure and your source providers may process technical or diagnostic information under their own practices. Account API transport uses HTTPS; this does not make provider HTTP connections encrypted.</p>
+      <p>Android logs can contain playback/recording errors, channel/provider information and, in some error paths, URLs that contain credentials. Before sharing logs with support, review and remove passwords, tokens, private source addresses and unnecessary personal information.</p>
       <p>Android app-private storage and the protections described here do not guarantee complete security or encrypt every local record, HTTP connection, external file or backup. Do not post private source information or diagnostic logs in public issue reports.</p>
     </section>
 
     <section id="support" class="section">
-      <h2>7. Information you send to support</h2>
-      <p>If you email <a href="mailto:cs.tinyexperiments@gmail.com">cs.tinyexperiments@gmail.com</a>, we receive the sender address and the message, attachments and technical details you choose to send. We use that information to respond to your enquiry, investigate an issue or handle a privacy/deletion request.</p>
-      <p>Please send only what is necessary. Do not include passwords, verification codes, raw purchase tokens, full card details or private playlist credentials. An email provider, including Google’s Gmail service, processes correspondence under its own privacy/security practices. No account or support request is submitted merely by viewing these pages.</p>
+      <h2>8. Information you send to support</h2>
+      <p>If you email <a href="mailto:cs.tinyexperiments@gmail.com">cs.tinyexperiments@gmail.com</a>, we receive the sender address and the message, attachments and technical details you choose to send. We use that information to handle your enquiry, investigate an issue or process a privacy/deletion request. A deletion request also involves account-control verification and your explicit deletion consent.</p>
+      <p>Please send only what is necessary. <strong>Never send passwords, verification codes, password-reset or email-verification links, authentication/session tokens, raw purchase tokens, full card details or private playlist credentials.</strong> Please do not send identity documents; they are not needed for our ordinary deletion process.</p>
+      <p>An email provider, including Google's Gmail service, processes correspondence under its own privacy/security practices. No account or support request is submitted merely by viewing these pages. See <a href="account-deletion.html#contact">outside-app deletion instructions</a> for the mailbox-confirmation process.</p>
     </section>
 
     <section id="retention" class="section">
-      <h2>8. Retention, control and deletion</h2>
-      <p>Source records, preferences and other local information can remain until removed through relevant app controls, Android’s app-data clearing or uninstall. Cache/history limits vary; there is no single time-based expiry for all app files. Removing one source is not a promise that every related cache, backup, external copy or provider log is erased.</p>
-      <p>App-private recordings are normally removed with the app’s data. Shared/external copies, earlier exports, Android-managed backups and your providers’ records need separate management. We cannot remotely erase those independent copies from this website.</p>
-      <p>We retain support correspondence only for as long as needed to handle the enquiry and necessary follow-up or fulfil applicable legal obligations. You can request deletion of correspondence we hold by emailing us. We may verify that you control the relevant address and explain any legitimate reason some information must be retained. Email/hosting providers may separately retain information under their policies or obligations.</p>
-      <p>There is no active TellyDeck cloud-account deletion process to invoke for this release because account creation is unavailable. See <a href="account-deletion.html">data and account deletion</a> for local removal steps and how to contact us without reinstalling the app.</p>
+      <h2>9. Retention, control and your choices</h2>
+      <p>Source records, preferences and other local information can remain until removed through relevant app controls, Android's app-data clearing or uninstall. Cache/history limits vary; there is no single time-based expiry for all app files. Removing one source is not a promise that every related cache, backup, external copy or provider log is erased.</p>
+      <p>Account/device records are maintained while the account is in use unless removed through relevant controls. An accepted account-deletion request first durably closes the account and removes device/access-grant entries, then attempts Firebase Authentication deletion and remaining cleanup. Failed or partial cleanup is retried; accepted closure is not confirmation that every identity record or provider copy has already been erased.</p>
+      <div class="callout"><strong>Completed-account closure records:</strong> after deletion of your Firebase Authentication user and cleanup of account/device/proof records are complete, the remaining hashed account identifier and deletion marker are scheduled to expire <strong>30 days after cleanup completion</strong>. These records are pseudonymous, not guaranteed anonymous data. Pending cleanup records do not expire on that schedule, so cleanup can be retried. Database expiry deletion is asynchronous and may occur later than the scheduled date. This is not a promise that all personal information is erased within 30 days of your request.</div>
+      <p><strong>Support correspondence and private verification/case records:</strong> we manually delete these records <strong>90 days after the request is resolved</strong>, unless a specific legal or dispute-related need requires longer retention. Any such exception is documented. They are separate from the cloud account database; you may also request their deletion.</p>
+      <p><strong>Operational and audit logs:</strong> cloud operational log metadata has a configured 30-day retention period; required cloud audit logs have a locked 400-day retention period. These cloud logs use a global storage location, not the selected account-database region. Account deletion does not immediately remove these separate logs. These periods do not guarantee deletion of every provider-held copy or restrict all processing to the United States.</p>
+      <p>Proof challenges have short validity periods; expiry of permission to use a challenge is not the same as immediate removal of its stored record. Cleanup and provider retention can take additional time. Email, hosting and authentication providers may separately retain information under their own policies or obligations.</p>
+      <p>App-private recordings are normally removed with app-data clearing or uninstall, not by deleting the cloud account. Shared/external copies, earlier exports, Android-managed backups and your providers' records need separate management. We cannot remotely erase those independent copies from this website.</p>
+      <p>Deletion does not cancel a Google Play or provider subscription. Any previously issued offline authorisation cannot necessarily be recalled immediately; account deletion is not a promise of instant invalidation on an offline device. See <a href="account-deletion.html">data and account deletion</a> for steps, limits and the outside-app request route.</p>
+      <h3>Privacy requests</h3>
+      <p>Depending on applicable law, you may have rights to access, correct or delete personal information, or other rights concerning its use. Contact us at the address below to make a request. We may need to verify account control and clarify the request, and explain any applicable limits or retention requirements.</p>
     </section>
 
     <section id="audience" class="section">
-      <h2>9. General-purpose player; not specifically child-directed</h2>
-      <p>TellyDeck is not specifically designed for children. Content comes from sources selected by the user rather than a child-focused catalogue supplied by Tiny Experiments. Parents and guardians should supervise source/content selection and follow their providers’ age restrictions.</p>
-      <p>This release does not ask users to supply an age or date of birth or create TellyDeck account profiles. If you believe a child has sent personal information to our support address, contact us so we can review the situation and remove information where appropriate.</p>
+      <h2>10. General-purpose player; not specifically child-directed</h2>
+      <p>TellyDeck is not specifically designed for children. Content comes from sources selected by the user rather than a child-focused catalogue supplied by Tiny Experiments. Parents and guardians should supervise source/content selection and follow their providers' age restrictions.</p>
+      <p>If you believe a child has provided personal information through an account or our support address, contact us so we can review the situation and remove information where appropriate.</p>
     </section>
 
     <section id="website" class="section">
-      <h2>10. These legal web pages</h2>
-      <p>These static pages are prepared for hosting on GitHub Pages. They add no analytics, advertising scripts, tracking pixels, remote fonts, forms or embedded login flows. GitHub may process visitor IP addresses and technical request information to host and protect the site, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub General Privacy Statement</a>.</p>
-      <p>External links take you to services with their own privacy practices. Opening an email link prepares a message in your mail application; it does not send it automatically or perform a backend action.</p>
+      <h2>11. These legal web pages</h2>
+      <p>These static pages are hosted separately on GitHub Pages, not an account sign-in or deletion-execution form. GitHub may process visitor IP addresses and technical request information to host and protect the site, under the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noreferrer">GitHub General Privacy Statement</a>.</p>
+      <p>External links take you to services with their own privacy practices. Opening an email link prepares a message in your mail application; it does not send it automatically or perform an account action.</p>
     </section>
 
     <section id="changes" class="section">
-      <h2>11. Changes to this policy</h2>
-      <p>We will revise this policy when the app’s actual data practices or service configuration change, including before enabling Firebase accounts or Premium purchases, and update the date above. Where required, additional notice or consent will be provided; a website policy alone does not replace required in-app disclosures.</p>
+      <h2>12. Changes to this policy</h2>
+      <p>We will revise this notice when actual data practices or service configuration change, including before enabling new Premium purchases, and update the date above. Where required, additional notice or consent will be provided; a website policy alone does not replace required in-app disclosures.</p>
     </section>
 
     <section id="contact" class="section">
-      <h2>12. Contact Tiny Experiments</h2>
-      <p>For TellyDeck support, privacy questions or a request relating to information you sent us, email <a href="mailto:cs.tinyexperiments@gmail.com?subject=TellyDeck%20privacy%20question">cs.tinyexperiments@gmail.com</a>.</p>
+      <h2>13. Contact Tiny Experiments</h2>
+      <p>For TellyDeck support, privacy questions or deletion requests, email <a href="mailto:cs.tinyexperiments@gmail.com?subject=TellyDeck%20privacy%20question">cs.tinyexperiments@gmail.com</a>.</p>
       <p>You do not need to install or reinstall TellyDeck to contact us. Please do not send private credentials or post personal information in a public GitHub issue.</p>
     </section>
   </main>
